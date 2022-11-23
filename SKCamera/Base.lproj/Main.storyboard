@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SKCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaA-GO-EZx">
+                                <rect key="frame" x="0.0" y="664" width="390" height="120"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="fCF-eH-XSo">
+                                        <rect key="frame" x="30" y="10" width="330" height="70"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1s0-Go-hAd">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-i3-KOd">
+                                                        <rect key="frame" x="5" y="5" width="60" height="60"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="3Yg-5p-dLC"/>
+                                                    <constraint firstAttribute="height" constant="70" id="6xD-q6-Wjt"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2c0-i3-KOd" secondAttribute="bottom" constant="5" id="A49-KK-KH0"/>
+                                                    <constraint firstItem="2c0-i3-KOd" firstAttribute="leading" secondItem="1s0-Go-hAd" secondAttribute="leading" constant="5" id="Khu-sE-TPU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2c0-i3-KOd" secondAttribute="trailing" constant="5" id="QUv-70-jDO"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="chI-rq-BlF"/>
+                                                    <constraint firstItem="2c0-i3-KOd" firstAttribute="top" secondItem="1s0-Go-hAd" secondAttribute="top" constant="5" id="uvk-g8-ZTR"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEd-MD-CHn" customClass="SwiftyRecordButton" customModule="SKCamera" customModuleProvider="target">
+                                                <rect key="frame" x="130" y="0.0" width="70" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="VdZ-Sr-oMU"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9VV-Kt-gps">
+                                                <rect key="frame" x="260" y="0.0" width="70" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peA-e7-IrZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="flipCamera"/>
+                                                        <connections>
+                                                            <action selector="cameraSwitchTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ub-Bk-Fkg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="peA-e7-IrZ" secondAttribute="bottom" id="U9I-PS-Rkg"/>
+                                                    <constraint firstAttribute="width" constant="70" id="g1S-5Z-kIZ"/>
+                                                    <constraint firstItem="peA-e7-IrZ" firstAttribute="top" secondItem="9VV-Kt-gps" secondAttribute="top" id="i4d-wo-I4m"/>
+                                                    <constraint firstItem="peA-e7-IrZ" firstAttribute="leading" secondItem="9VV-Kt-gps" secondAttribute="leading" id="ndA-rb-gIz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="peA-e7-IrZ" secondAttribute="trailing" id="o4d-ls-yhk"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fCF-eH-XSo" firstAttribute="leading" secondItem="MaA-GO-EZx" secondAttribute="leading" constant="30" id="VkX-7a-aHk"/>
+                                    <constraint firstAttribute="height" constant="120" id="rrP-ng-wMr"/>
+                                    <constraint firstAttribute="bottom" secondItem="fCF-eH-XSo" secondAttribute="bottom" constant="40" id="xa3-m5-lEZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="fCF-eH-XSo" secondAttribute="trailing" constant="30" id="yzv-Ca-mrd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHF-SD-JHl">
+                                <rect key="frame" x="0.0" y="67" width="390" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="IsH-eZ-n3D">
+                                        <rect key="frame" x="30" y="40" width="330" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEa-MN-qWI">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="OZB-3U-TdV"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="toggleFlashTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f5l-se-JKL"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8R0-pY-qR9">
+                                                <rect key="frame" x="288.66666666666669" y="0.0" width="41.333333333333314" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Cil-Na-o3T"/>
+                                    <constraint firstItem="IsH-eZ-n3D" firstAttribute="leading" secondItem="GHF-SD-JHl" secondAttribute="leading" constant="30" id="RoF-7r-Xlu"/>
+                                    <constraint firstAttribute="trailing" secondItem="IsH-eZ-n3D" secondAttribute="trailing" constant="30" id="qya-Mf-IWS"/>
+                                    <constraint firstItem="IsH-eZ-n3D" firstAttribute="top" secondItem="GHF-SD-JHl" secondAttribute="top" constant="40" id="yr7-m7-LPm"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vFh-ts-mcW" userLabel="cameraSegment">
+                                <rect key="frame" x="139.66666666666666" y="623" width="111" height="32"/>
+                                <segments>
+                                    <segment title="Photo"/>
+                                    <segment title="Video"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GHF-SD-JHl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3cO-lI-GAb"/>
+                            <constraint firstItem="MaA-GO-EZx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rjv-B3-gJg"/>
+                            <constraint firstItem="MaA-GO-EZx" firstAttribute="top" secondItem="vFh-ts-mcW" secondAttribute="bottom" constant="10" id="ayQ-KV-g8z"/>
+                            <constraint firstItem="GHF-SD-JHl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="crp-fe-3QH"/>
+                            <constraint firstItem="vFh-ts-mcW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dMF-K5-j99"/>
+                            <constraint firstAttribute="bottom" secondItem="MaA-GO-EZx" secondAttribute="bottom" constant="60" id="ebv-K1-INO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GHF-SD-JHl" secondAttribute="trailing" id="rDV-nu-fsn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MaA-GO-EZx" secondAttribute="trailing" id="sxM-2O-R8z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraSegment" destination="vFh-ts-mcW" id="Y9k-I2-gBl"/>
+                        <outlet property="captureButton" destination="TEd-MD-CHn" id="wps-cN-aOb"/>
+                        <outlet property="flashButton" destination="VEa-MN-qWI" id="cq7-LU-2Yc"/>
+                        <outlet property="flipCameraButton" destination="peA-e7-IrZ" id="7oA-UD-TJg"/>
+                        <outlet property="imageView" destination="2c0-i3-KOd" id="O8Q-mw-L6A"/>
+                        <outlet property="timerLabel" destination="8R0-pY-qR9" id="RbR-M3-6dL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36.92307692307692" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flipCamera" width="30" height="22.666666030883789"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
